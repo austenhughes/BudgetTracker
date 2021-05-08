@@ -112,7 +112,7 @@ function sendTransaction(isAdding) {
   populateTable();
   populateTotal();
   
-  // also send to server
+  // also send to server !!! Angry !!!
   fetch("/api/transaction", {
     method: "POST",
     body: JSON.stringify(transaction),
@@ -135,7 +135,7 @@ function sendTransaction(isAdding) {
     }
   })
   .catch(err => {
-    // fetch failed, so save in indexed db
+    // fetch failed, so save in indexed db !!! also Angry !!!
     saveRecord(transaction);
 
     // clear form
