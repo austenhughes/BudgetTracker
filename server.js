@@ -15,7 +15,9 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/agile-garden-31275", {
+mongoose.connect(
+  process.env.MONGODB_URI ||
+  "mongodb://localhost/agile-garden-31275", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
